@@ -1,8 +1,71 @@
 // default css
+
+// 字体大小：fs12-fs32，font-size分别从12px到32px
+.font(@i) when(@i <= 32){
+  .f@{i} {
+     font-size: @i + 0px ;
+  }
+  .font((@i + 2));
+}
+.font(12);
+
+.flex {
+  display: flex;
+  &-align {
+    align-items: center;
+    justify-content: center;
+  }
+  &-center {
+    justify-content: center;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+  &-around {
+    justify-content: space-around;
+  }
+  &-evenly {
+    justify-content: space-evenly;
+  }
+  &-wrap {
+    flex-wrap: wrap;
+  }
+  &-column {
+    flex-direction: column;
+    &-between {
+      justify-content: space-between;
+    }
+    &-center {
+      justify-content: center;
+    }
+  }
+}
+
 .fullscreen {
   width: 100vw;
   height: 100vh;
+  &-scoll {
+    overflow: scroll;
+  }
+  &-hidden {
+    overflow: hidden;
+  }
 }
+
+.btn {
+  border-radius: @borderRadius;
+  height: 50px;
+  border: none;
+  &-green {
+    background-color: #03950bf2;
+    color: #fff;
+    box-shadow: 3px 1px 7px 1px #077013;;
+  }
+  &-white {
+    box-shadow: 3px 1px 7px 1px #c7c6c6;;
+  }
+}
+
 .bold {
   font-weight: bold;
 }
