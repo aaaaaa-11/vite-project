@@ -1,21 +1,21 @@
 <template>
   <div class="home-page fullscreen">
-    <a-page-header :title="title" class="page-header"></a-page-header>
-    <a-date-picker />
+    <router-view />
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
 export default {
+  data () {
+    return {
+    }
+  },
   computed: {
-    ...mapState(['title'])
+  },
+  watch: {
   }
 }
 </script>
 
 <style lang="less">
-.page-header {
-  font-size: @f;
-}
 </style>

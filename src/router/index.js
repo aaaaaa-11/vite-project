@@ -5,7 +5,22 @@ const routes = [
   {
     name: 'home',
     path: '/',
-    component: Home
+    component: Home,
+    redirect: {
+      name: 'changePageSize'
+    },
+    children: [
+      {
+        name: 'changePageSize',
+        path: 'changePageSize',
+        component: () => import('../views/ChangePageSize.vue')
+      },
+      {
+        name: 'imageEditor',
+        path: 'imageEditor',
+        component: () => import('../views/ImageEditor/Index.vue')
+      }
+    ]
   }
 ]
 

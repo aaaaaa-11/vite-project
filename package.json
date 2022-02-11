@@ -7,8 +7,11 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^6.0.1",
     "ant-design-vue": "^2.2.8",
     "axios": "^0.24.0",
+    "dayjs": "^1.10.7",
+    "fabric": "^5.0.0",
     "moment": "^2.29.1",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12",
